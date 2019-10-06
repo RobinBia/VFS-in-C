@@ -1,0 +1,132 @@
+/*vfs.c*/
+#include <stdio.h>
+#include <stdlib.h>
+
+
+void create(int Blocksize, int Blockcount)
+{
+
+}
+
+
+
+
+
+
+
+
+//argv[0] == "vfs", argv[1] == "archiv",argv[2] == "operation",argv[3] == "parameter",
+
+void main(argc, **argv)
+{
+
+static int epsilon = argc;
+
+
+FILE c;
+
+int zeichen;
+
+	if(argc < 4)
+	{
+	printf("Bitte überprüfen Sie ihre Eingabe.);
+	return EXIT_FAILURE;
+	}
+
+	else
+	{
+		if(c = fopen(argv[1],"r") == NULL)
+		{
+			printf("Archiv %s nicht gefunden", argv[1])
+		}
+		else
+		{
+//crete-Abfrage
+			if(strcmp(argv[2], "create")
+			{ 
+				if(argc < 6)
+				{
+					prinf("Sie haben eine falsche Eingabe gemacht.");
+					return EXIT_FAILURE;
+			   	}
+			byte h = create(argv[4], argv[5]);
+			if(h == 0)
+			{
+			printf("Die Operation wurde erfolgreich ausgeführt.");
+			}
+			if(h == 1)
+			{
+			printf("Das Anlegen des VFS war nicht möglich.");
+			}
+			if(h == 3)
+			{
+			printf("Ein VFS mit dem gegebenen Namen existiert bereits.");
+			}
+			}
+
+//add-Abfrage
+			if(strcmp(argv[3], "add")
+			{
+				if(argc < 6)
+				{
+					prinf("Sie haben eine falsche Eingabe gemacht.");
+					return EXIT_FAILURE;
+			   	}
+			byte h = add(argv[4], argv[5]);
+			if(h == 0)
+			{
+			printf("Das Kommando wurde erfolgreich ausgeführt.");
+			}
+			if(h == 2)
+			{
+			printf("Das VFS konnte nicht geöffnet werden.");
+			}
+			if(h == 11)
+			{
+			printf("Eine Datei mit diesem Dateinamen existiert bereits.");
+			}
+			if(h == 12)
+			{
+			printf("Nicht genugend freier Speicherplatz im VFS.");
+			}
+			if(h == 13)
+			{
+			printf("Die Quelldatei existiert nicht.");
+			}
+			}
+
+//del-Abfrage
+			if(strcmp(argv[3], "del")
+			{
+				del(...);
+			}
+			if(strcmp(argv[3], "defrag")
+			{
+				defrag(...);
+			}
+			if(strcmp(argv[3], "free")
+			{
+				free(...);
+			}
+			if(strcmp(argv[3], "get")
+			{
+				get(...);
+			}
+			if(strcmp(argv[3], "list")
+			{
+				list(...);
+			}
+			if(strcmp(argv[3], "used")
+			{
+				used(...);
+			}
+			else
+			{
+				printf("Sie haben eine unzulässige Operation angegeben. /n");
+				
+				return EXIT_FAILURE;
+
+			}
+		}
+	}
+}
